@@ -9,8 +9,8 @@
     "test": "tree-sitter test"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Tzvi Melamed <tzvi@melamed.biz>",
+  "license": "MIT",
   "dependencies": {
     "nan": "^2.14.0"
   },
