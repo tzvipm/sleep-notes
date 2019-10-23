@@ -1,0 +1,19 @@
+{
+  "name": "tree-sitter-sleep-notes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tree-sitter generate",
+    "parse": "tree-sitter parse"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nan": "^2.14.0"
+  },
+  "devDependencies": {
+    "tree-sitter-cli": "^0.15.12"
+  }
+}
