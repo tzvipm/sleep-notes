@@ -1,0 +1,18 @@
+{
+  "name": "sleep-notes-parser",
+  "version": "1.0.0",
+  "author": "Tzvi Melamed <tzvi@melamed.biz>",
+  "license": "MIT",
+  "main": "parser.js",
+  "scripts": {
+    "build": "tree-sitter build-wasm node_modules/tree-sitter-sleep-notes",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "devDependencies": {
+    "tree-sitter-cli": "^0.15.12",
+    "tree-sitter-sleep-notes": "^1.0.0"
+  },
+  "dependencies": {
+    "web-tree-sitter": "^0.15.10"
+  }
+}
