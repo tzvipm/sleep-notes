@@ -5,7 +5,7 @@
     "lerna": "^3.18.3"
   },
   "scripts": {
-      "build": "lerna bootstrap && lerna run build",
-      "test": "lerna run test"
+    "build": "lerna bootstrap && lerna run build",
+    "test": "lerna run test"
   }
 }
