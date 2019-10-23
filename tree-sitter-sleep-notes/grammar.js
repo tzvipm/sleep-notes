@@ -45,7 +45,8 @@ module.exports = grammar({
       seq(
         $.time_hour,
         optional(seq($.time_separator, $.time_minute)),
-        optional(choice($.am_specifier, $.pm_specifier))
+        optional(choice($.am_specifier, $.pm_specifier)),
+        optional('ish'),
       ),
     am_specifier: $ => "am",
     pm_specifier: $ => "pm",

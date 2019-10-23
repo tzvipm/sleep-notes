@@ -309,6 +309,10 @@
     "named": true
   },
   {
+    "type": "ish",
+    "named": false
+  },
+  {
     "type": "nap:",
     "named": false
   },

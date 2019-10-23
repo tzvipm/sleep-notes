@@ -287,6 +287,18 @@
               "type": "BLANK"
             }
           ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "ish"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         }
       ]
     },
