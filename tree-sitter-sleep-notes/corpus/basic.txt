@@ -87,8 +87,8 @@ Bedtime: 6:35
             (time
                 (time_hour)
                 (time_separator)
-                (time_minute))
-                (comment))
+                (time_minute)))
+        (comment)
         (nap_entry
             (ordinal)
             (time_range

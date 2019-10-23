@@ -1,11 +1,335 @@
 [
   {
-    "type": "source_file",
+    "type": "bedtime_entry",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "time",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "date_range",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "date_day",
+          "named": true
+        },
+        {
+          "type": "range_specifier",
+          "named": true
+        },
+        {
+          "type": "short_month",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "entry_list",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "bedtime_entry",
+          "named": true
+        },
+        {
+          "type": "nap_entry",
+          "named": true
+        },
+        {
+          "type": "slept_entry",
+          "named": true
+        },
+        {
+          "type": "wakeup_entry",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "nap_entry",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "ordinal",
+          "named": true
+        },
+        {
+          "type": "time_range",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "ordinal",
     "named": true,
     "fields": {}
   },
   {
-    "type": "hello",
+    "type": "range_specifier",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "short_month",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "sleep_note",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "date_range",
+          "named": true
+        },
+        {
+          "type": "entry_list",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "slept_entry",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "time_range",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "source_file",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "sleep_note",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "time",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "am_specifier",
+          "named": true
+        },
+        {
+          "type": "pm_specifier",
+          "named": true
+        },
+        {
+          "type": "time_hour",
+          "named": true
+        },
+        {
+          "type": "time_minute",
+          "named": true
+        },
+        {
+          "type": "time_separator",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "time_range",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "range_specifier",
+          "named": true
+        },
+        {
+          "type": "time",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "wakeup_entry",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "time",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "(",
+    "named": false
+  },
+  {
+    "type": ")",
+    "named": false
+  },
+  {
+    "type": "-",
+    "named": false
+  },
+  {
+    "type": "1st",
+    "named": false
+  },
+  {
+    "type": "2nd",
+    "named": false
+  },
+  {
+    "type": "3rd",
+    "named": false
+  },
+  {
+    "type": "Apr",
+    "named": false
+  },
+  {
+    "type": "Aug",
+    "named": false
+  },
+  {
+    "type": "Bedtime:",
+    "named": false
+  },
+  {
+    "type": "Dec",
+    "named": false
+  },
+  {
+    "type": "Feb",
+    "named": false
+  },
+  {
+    "type": "Jan",
+    "named": false
+  },
+  {
+    "type": "Jul",
+    "named": false
+  },
+  {
+    "type": "Jun",
+    "named": false
+  },
+  {
+    "type": "Mar",
+    "named": false
+  },
+  {
+    "type": "May",
+    "named": false
+  },
+  {
+    "type": "Nov",
+    "named": false
+  },
+  {
+    "type": "Oct",
+    "named": false
+  },
+  {
+    "type": "Sep",
+    "named": false
+  },
+  {
+    "type": "Sept",
+    "named": false
+  },
+  {
+    "type": "Slept",
+    "named": false
+  },
+  {
+    "type": "Wake up:",
+    "named": false
+  },
+  {
+    "type": "am_specifier",
+    "named": true
+  },
+  {
+    "type": "date_day",
+    "named": true
+  },
+  {
+    "type": "nap:",
+    "named": false
+  },
+  {
+    "type": "pm_specifier",
+    "named": true
+  },
+  {
+    "type": "time_hour",
+    "named": true
+  },
+  {
+    "type": "time_minute",
+    "named": true
+  },
+  {
+    "type": "time_separator",
+    "named": true
+  },
+  {
+    "type": "–",
     "named": false
   }
 ]
