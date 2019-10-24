@@ -1,0 +1,25 @@
+{
+  "name": "sleep-notes",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.5.1",
+    "@material-ui/icons": "^4.5.1",
+    "micro": "^9.3.4",
+    "next": "9.1.1",
+    "react": "16.11.0",
+    "react-dom": "16.11.0",
+    "tree-sitter": "^0.15.10",
+    "tree-sitter-sleep-notes": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^12.11.6",
+    "@types/react": "^16.9.9",
+    "typescript": "^3.6.4"
+  }
+}
