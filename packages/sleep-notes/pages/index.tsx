@@ -67,14 +67,14 @@ export default function Home() {
             </AppBar>
 
             <Grid container spacing={3}>
-                <Grid item xs>
+                <Grid item md={6} sm={12}>
                     <Paper className={classes.paper}>
                         <p>Copy and paste your sleep note into the text field below:</p>
                         <TextField variant="outlined" value={note} onChange={evt => setNote(evt.target.value)} multiline fullWidth />
                         <Button className={classes.button} variant="contained" color="primary" onClick={handleProcess}>Process</Button>
                     </Paper>
                 </Grid>
-                <Grid item xs>
+                <Grid item md={6} sm={12}>
                     <Paper className={classes.paper}>
                         <pre>{tree}</pre>
                     </Paper>
