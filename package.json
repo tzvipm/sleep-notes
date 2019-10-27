@@ -2,10 +2,12 @@
   "name": "root",
   "private": true,
   "devDependencies": {
+    "@babel/runtime-corejs2": "^7.6.3",
     "lerna": "^3.18.3"
   },
   "scripts": {
     "build": "lerna bootstrap && lerna run build",
-    "test": "lerna run test"
+    "test": "lerna run test",
+    "up": "npm install && npm run build"
   }
 }
