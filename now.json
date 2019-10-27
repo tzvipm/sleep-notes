@@ -1,0 +1,16 @@
+{
+  "name": "sleep-notes",
+  "builds": [
+    {
+      "src": "packages/sleep-notes/next.config.js",
+      "use": "@now/next"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "packages/sleep-notes/$1",
+      "continue": true
+    }
+  ]
+}
