@@ -8,6 +8,8 @@ import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import TextField from '@material-ui/core/TextField';
+import Paper from '@material-ui/core/Paper';
+import Grid from '@material-ui/core/Grid';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -23,15 +25,31 @@ const useStyles = makeStyles((theme: Theme) =>
         title: {
             flexGrow: 1,
         },
+        paper: {
+            padding: theme.spacing(2),
+            textAlign: 'center',
+            color: theme.palette.text.secondary,
+        },
     }),
 );
 
 export default function Home() {
     const classes = useStyles({});
     const [note, setNote] = useState('');
+    const [tree, setTree] = useState('');
+
+    const handleProcess = async () => {
+        const response = await fetch('api/parsenote', {
+            method: 'POST',
+            mode: 'same-origin',
+            body: JSON.stringify({note}),
+        });
+        const {parsed} = await response.json();
+        setTree(parsed);
+    };
 
     return (
-        <div>
+        <div className={classes.root}>
             <Head>
                 <title>Sleep Notes</title>
                 <link rel='icon' href='/favicon.ico' />
@@ -48,11 +66,20 @@ export default function Home() {
                 </Toolbar>
             </AppBar>
 
-            <p>Copy and paste your sleep note into the text field below:</p>
-
-            <TextField variant="outlined" value={note} onChange={evt => setNote(evt.target.value)} multiline fullWidth />
-
-            <Button className={classes.button} variant="contained" color="primary">Process</Button>
+            <Grid container spacing={3}>
+                <Grid item xs>
+                    <Paper className={classes.paper}>
+                        <p>Copy and paste your sleep note into the text field below:</p>
+                        <TextField variant="outlined" value={note} onChange={evt => setNote(evt.target.value)} multiline fullWidth />
+                        <Button className={classes.button} variant="contained" color="primary" onClick={handleProcess}>Process</Button>
+                    </Paper>
+                </Grid>
+                <Grid item xs>
+                    <Paper className={classes.paper}>
+                        <pre>{tree}</pre>
+                    </Paper>
+                </Grid>
+            </Grid>
         </div>
     );
 }

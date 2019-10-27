@@ -36,13 +36,13 @@ CFLAGS_CC_Debug := \
 	-std=gnu++1y
 
 INCS_Debug := \
-	-I/home/gitpod/.node-gyp/10.15.3/include/node \
-	-I/home/gitpod/.node-gyp/10.15.3/src \
-	-I/home/gitpod/.node-gyp/10.15.3/deps/openssl/config \
-	-I/home/gitpod/.node-gyp/10.15.3/deps/openssl/openssl/include \
-	-I/home/gitpod/.node-gyp/10.15.3/deps/uv/include \
-	-I/home/gitpod/.node-gyp/10.15.3/deps/zlib \
-	-I/home/gitpod/.node-gyp/10.15.3/deps/v8/include \
+	-I/home/gitpod/.cache/node-gyp/10.15.3/include/node \
+	-I/home/gitpod/.cache/node-gyp/10.15.3/src \
+	-I/home/gitpod/.cache/node-gyp/10.15.3/deps/openssl/config \
+	-I/home/gitpod/.cache/node-gyp/10.15.3/deps/openssl/openssl/include \
+	-I/home/gitpod/.cache/node-gyp/10.15.3/deps/uv/include \
+	-I/home/gitpod/.cache/node-gyp/10.15.3/deps/zlib \
+	-I/home/gitpod/.cache/node-gyp/10.15.3/deps/v8/include \
 	-I$(srcdir)/node_modules/nan \
 	-I$(srcdir)/src
 
@@ -77,13 +77,13 @@ CFLAGS_CC_Release := \
 	-std=gnu++1y
 
 INCS_Release := \
-	-I/home/gitpod/.node-gyp/10.15.3/include/node \
-	-I/home/gitpod/.node-gyp/10.15.3/src \
-	-I/home/gitpod/.node-gyp/10.15.3/deps/openssl/config \
-	-I/home/gitpod/.node-gyp/10.15.3/deps/openssl/openssl/include \
-	-I/home/gitpod/.node-gyp/10.15.3/deps/uv/include \
-	-I/home/gitpod/.node-gyp/10.15.3/deps/zlib \
-	-I/home/gitpod/.node-gyp/10.15.3/deps/v8/include \
+	-I/home/gitpod/.cache/node-gyp/10.15.3/include/node \
+	-I/home/gitpod/.cache/node-gyp/10.15.3/src \
+	-I/home/gitpod/.cache/node-gyp/10.15.3/deps/openssl/config \
+	-I/home/gitpod/.cache/node-gyp/10.15.3/deps/openssl/openssl/include \
+	-I/home/gitpod/.cache/node-gyp/10.15.3/deps/uv/include \
+	-I/home/gitpod/.cache/node-gyp/10.15.3/deps/zlib \
+	-I/home/gitpod/.cache/node-gyp/10.15.3/deps/v8/include \
 	-I$(srcdir)/node_modules/nan \
 	-I$(srcdir)/src
 
