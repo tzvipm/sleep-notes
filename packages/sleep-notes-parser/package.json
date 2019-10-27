@@ -1,6 +1,6 @@
 {
   "name": "sleep-notes-parser",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Tzvi Melamed <tzvi@melamed.biz>",
   "homepage": "https://github.com/tzvipm/sleep-notes#readme",
   "license": "MIT",
@@ -12,8 +12,12 @@
   "scripts": {
     "build": "microbundle",
     "dev": "microbundle watch",
-    "test": "jest"
+    "test": "jest",
+    "prepublishOnly": "npm run build"
   },
+  "files": [
+    "dist/**/*"
+  ],
   "dependencies": {
     "chevrotain": "^6.5.0"
   },
@@ -25,5 +29,6 @@
     "babel-jest": "^24.9.0",
     "jest": "^24.9.0",
     "microbundle": "^0.11.0"
-  }
+  },
+  "gitHead": "2f86d3eac8e2c812181109fd082d8791de54b6ab"
 }
