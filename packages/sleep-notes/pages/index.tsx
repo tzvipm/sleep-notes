@@ -36,12 +36,13 @@ const useStyles = makeStyles((theme: Theme) =>
 export default function Home() {
     const classes = useStyles({});
     const [note, setNote] = useState('');
-    const [tree, setTree] = useState('');
+    const [tree, setTree] = useState({});
 
     const handleProcess = async () => {
         const response = await fetch('api/parsenote', {
             method: 'POST',
             mode: 'same-origin',
+            headers:{'content-type': 'application/json'},
             body: JSON.stringify({note}),
         });
         const {parsed} = await response.json();
@@ -76,7 +77,7 @@ export default function Home() {
                 </Grid>
                 <Grid item md={6} sm={12}>
                     <Paper className={classes.paper}>
-                        <pre>{tree}</pre>
+                        <pre>{JSON.stringify(tree)}</pre>
                     </Paper>
                 </Grid>
             </Grid>

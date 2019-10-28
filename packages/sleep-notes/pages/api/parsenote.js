@@ -1,12 +1,11 @@
-import micro, {json, send} from 'micro';
 import {Lexer, Parser} from 'sleep-notes-parser';
 
-export default micro(async (req, res) => {
-    const {note} = await json(req);
+export default (req, res) => {
+    const {note} = req.body;
     const lexingResult = Lexer.tokenize(note);
     Parser.input = lexingResult.tokens;
     const parsed = Parser.sleepNote();
-    send(res, 200, {
+    res.status(200).json({
         parsed,
     });
-});
+};
