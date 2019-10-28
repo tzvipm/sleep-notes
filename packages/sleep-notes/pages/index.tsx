@@ -11,6 +11,7 @@ import TextField from '@material-ui/core/TextField';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import JSONTree from 'react-json-tree';
+import SleepTimeline from '../components/SleepTimeline';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -104,6 +105,7 @@ export default function Home() {
                 <Grid item md={6} sm={12}>
                     <Paper className={classes.paper}>
                         <JSONTree data={tree} theme={jsonTheme} invertTheme={false} />
+                        <SleepTimeline data={tree} />
                     </Paper>
                 </Grid>
             </Grid>
