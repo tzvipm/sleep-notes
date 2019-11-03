@@ -68,6 +68,7 @@ export class AmPmContext {
         if (hourNum < this.lastHour) {
             this.toggle();
         }
+        this.lastHour = hourNum;
         return this.get();
     }
 
