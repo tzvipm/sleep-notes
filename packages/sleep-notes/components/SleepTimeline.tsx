@@ -39,6 +39,8 @@ export function SleepTimeline(props) {
     );
     const duration = new Duration(start, end, 1);
 
+    console.log({start,nightSleeps,wakeup,naps,end});
+
     const napSleep = naps.reduce((acc, cur) => acc + cur.getMinutes(), 0);
     const nightSleep = nightSleeps.reduce(
         (acc, cur) => acc + cur.getMinutes(),
