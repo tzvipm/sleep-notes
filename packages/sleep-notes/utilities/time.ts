@@ -48,7 +48,8 @@ export class Duration {
 
     getMinutes(): number {
         const diff = this.end.getMinutesFromMidnight() - this.start.getMinutesFromMidnight();
-        const fromDays = this.daySpans * 24 * 60;
+        const daysToAdd = this.daySpans > 0 ? this.daySpans : (diff < 0 ? 1 : 0)
+        const fromDays = daysToAdd * 24 * 60;
         return fromDays + diff;
     }
 
