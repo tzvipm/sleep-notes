@@ -1,11 +1,13 @@
+export type AmPm = 'am' | 'pm';
+
 export class Time {
     private hour: number;
     private minute: number;
-    private ampm?: 'am' | 'pm';
+    private ampm?: AmPm;
 
     constructor(
-        data: { hour: number; minute: number; ampm?: 'am' | 'pm' },
-        context?: 'am'|'pm',
+        data: { hour: number; minute: number; ampm?: AmPm },
+        context?: AmPm,
     ) {
         this.hour = data.hour;
         this.minute = data.minute;
@@ -33,8 +35,16 @@ export class Time {
     }
 }
 
+export class Minutes {
+    public static toString(numMinutes: number): string {
+        const minutes = numMinutes % 60;
+        const hours = (numMinutes - minutes) / 60;
+        return `${hours} hours${minutes > 0 ? ` and ${minutes} minutes` : ''}`;
+    }
+}
+
 export class Duration {
-    constructor(private start: Time, private end: Time, private daySpans: number = 0) {}
+    constructor(public start: Time, public end: Time, private daySpans: number = 0) {}
 
     getMinutes(): number {
         const diff = this.end.getMinutesFromMidnight() - this.start.getMinutesFromMidnight();
@@ -43,9 +53,27 @@ export class Duration {
     }
 
     toString() {
-        const totalMinutes = this.getMinutes();
-        const minutes = totalMinutes % 60;
-        const hours = (totalMinutes - minutes) / 60;
-        return `${hours} hours${minutes > 0 ? `and ${minutes} minutes` : ''}`;
+        return Minutes.toString(this.getMinutes());
+    }
+}
+
+export class AmPmContext {
+    private lastHour = 0;
+
+    constructor(private ampm: AmPm) {}
+
+    next(hour: number): AmPm {
+        if (hour < this.lastHour) {
+            this.toggle();
+        }
+        return this.get();
+    }
+
+    get(): AmPm {
+        return this.ampm;
+    }
+
+    private toggle() {
+        this.ampm = this.ampm === 'am' ? 'pm' : 'am';
     }
 }
