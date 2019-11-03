@@ -2,7 +2,7 @@ import React from 'react';
 import { Time, Duration } from '../utilities/time';
 
 export function SleepTimeline(props) {
-    const entries = props && props.data || {};
+    const entries = props && props.data  && props.data.entries || {};
     if (entries.bedtime == null || entries.nextBedtime == null) {
         return (
             <div>
