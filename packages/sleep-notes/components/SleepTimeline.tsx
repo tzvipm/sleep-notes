@@ -1,11 +1,10 @@
 import React from 'react';
 import { Time, Duration } from '../utilities/time';
 
-export default function SleepTimeline({ data = {} }: any) {
-    const { entries = {} } = data;
+export function SleepTimeline(props) {
+    const entries = props && props.data || {};
     if (entries.bedtime == null || entries.nextBedtime == null) {
-        return
-        (
+        return (
             <div>
                 <h3>Timeline coming soon</h3>
                 <p>start: ?</p>

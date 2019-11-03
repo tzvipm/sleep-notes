@@ -11,7 +11,7 @@ import TextField from '@material-ui/core/TextField';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import JSONTree from 'react-json-tree';
-import SleepTimeline from '../components/SleepTimeline';
+import {SleepTimeline} from '../components/SleepTimeline';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
