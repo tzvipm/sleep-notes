@@ -63,7 +63,8 @@ export class AmPmContext {
     constructor(private ampm: AmPm) {}
 
     next(hour: number): AmPm {
-        if (hour < this.lastHour) {
+        const hourNum = hour === 12 ? 0 : hour;
+        if (hourNum < this.lastHour) {
             this.toggle();
         }
         return this.get();
